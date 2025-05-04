@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Random Waifu Generator</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="name-input-container" id="nameInputContainer">
+    <label for="nameInput">Enter your anon nickname:</label>
+    <input type="text" id="nameInput" />
+    <button onclick="submitName()">Submit</button>
+</div>
+
+<div class="franchise-select" id="franchiseSelect" style="display: none;">
+    <h2>SELECT A SERIES</h2>
+    <h2>Claim your waifu! You will receive a random state mandated wife. If you don't like who you got you can roll again, but that will add +1 to her body count. You only get one try for each series.</h2>
+    <div class="franchise-options">
+        <img src="persona.jpg" class="franchise" onclick="selectFranchise(0)">
+        <img src="fire_emblem.jpg" class="franchise" onclick="selectFranchise(1)">    
+        <img src="rance.jpg" class="franchise" onclick="selectFranchise(2)">
+    </div>
+</div>
+
+<div class="controls" style="display: none;">
+    <div id="counter">Body Count: 0</div>
+    <button onclick="changeImage()">Roll</button>
+    <button onclick="acceptImage()">Claim</button>
+</div>
+
+<div class="image-container" style="display: none;" id="image-container">
+    <img id="randomImage" src="" alt="Random Image" />
+</div>
+
+<div class="congratulations" id="congratulationsMessage" style="display: none;">
+    <p id="endScreen"></p>
+</div>
+
+<script src="storage.js"></script>
+<script src="imageLogic.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
